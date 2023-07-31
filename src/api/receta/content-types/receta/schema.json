@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recetas",
+  "info": {
+    "singularName": "receta",
+    "pluralName": "recetas",
+    "displayName": "receta",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "required": true
+    },
+    "Descripcion": {
+      "type": "text",
+      "required": true
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "raiting": {
+      "type": "string",
+      "required": true
+    },
+    "pais": {
+      "type": "enumeration",
+      "enum": [
+        "francia",
+        "españa",
+        "italia"
+      ]
+    },
+    "tipo": {
+      "type": "enumeration",
+      "enum": [
+        "entrada",
+        "plato principal",
+        "postre",
+        "dulce",
+        "salado"
+      ]
+    },
+    "Precio": {
+      "type": "biginteger",
+      "required": true,
+      "unique": false
+    }
+  }
+}
